@@ -10,10 +10,6 @@
 body {
   background-color: var(--darkgrey);
 }
-main {
-  max-width: 1440px;
-  width: 100%;
-}
 
 nav {
   display: flex;
@@ -68,7 +64,8 @@ ul a.active::after {
 
 main {
   max-width: 1440px;
-  padding: 0 140px 0 120px;
+  margin: 0 auto;
+  padding: 0 100px;
 }
 
 .content {
@@ -76,27 +73,139 @@ main {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .content span {
   color: var(--greenish);
   font-size: 40px;
-  margin: 0 20px 0 20px;
   display: inline-block;
   vertical-align: middle;
 }
 
 .content p {
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   font-size: 26px;
   color: var(--bluegrey);
   text-align: center;
   width: 75%;
   margin-bottom: 58px;
+  display: inline-block;
+}
+
+.content p.firstp::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../+assets/icomoon/SVG/point-right-green.svg);
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  transform: translateY(25%);
+}
+
+.content p.lastp::after {
+  content: "";
+  display: inline-block;
+  background-image: url(../+assets/icomoon/SVG/point-left-green.svg);
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  transform: translateY(25%);
 }
 
 .content img {
   width: 350px;
   height: 350px;
   border-radius: 50%;
+}
+
+main .cards {
+  display: flex;
+  justify-content: space-around;
+  height: 450px;
+  margin-bottom: 110px;
+}
+
+main .cards .card {
+  background-color: var(--greenish);
+  text-align: center;
+  width: 320px;
+  height: 400px;
+  font-size: 100px;
+  padding: 39px 30px 0 30px;
+  border-radius: 5px;
+}
+
+main .cards .card h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+main .cards .card p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+main .cards .card a {
+  text-decoration: none;
+  color: var(--darkgrey);
+}
+
+main .cards .card2 {
+  align-self: center;
+}
+
+main .cards .card3 {
+  align-self: flex-end;
+}
+
+.quoteblock {
+  background-color: var(--bluegrey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 45px 0;
+}
+
+.quoteblock img {
+  height: 150px;
+  width: 150px;
+  border-radius: 5px;
+  margin-right: 108px;
+}
+
+.quoteblock .person {
+  width: 300px;
+  text-align: center;
+}
+
+.quoteblock .person p.quote {
+  font-family: "Marvel", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.quoteblock .person p.name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+footer {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-left: 80px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  color: var(--bluegrey);
 }
