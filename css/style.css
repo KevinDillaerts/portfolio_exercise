@@ -1,7 +1,102 @@
 @import url("https://fonts.googleapis.com/css2?family=Marvel:wght@700&family=Montserrat:wght@100;400;500&display=swap");
+@import "../+assets/icomoon/style.css";
 
 :root {
   --darkgrey: #3a3a3a;
   --bluegrey: #c3d0d9;
   --greenish: #d0d9c3;
+}
+
+body {
+  background-color: var(--darkgrey);
+}
+main {
+  max-width: 1440px;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 48px 140px 48px 80px;
+}
+
+h1 {
+  font-family: "Marvel", sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 85px;
+  color: var(--bluegrey);
+}
+
+nav ul {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+}
+
+ul a {
+  text-decoration: none;
+  margin-left: 45px;
+  color: var(--bluegrey);
+}
+
+ul a {
+  transition: all 300ms;
+}
+
+ul a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: var(--greenish);
+  transition: all 300ms;
+}
+
+ul a:hover,
+ul a.active {
+  color: var(--greenish);
+}
+
+ul a:hover::after,
+ul a.active::after {
+  width: 100%;
+}
+
+main {
+  max-width: 1440px;
+  padding: 0 140px 0 120px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.content span {
+  color: var(--greenish);
+  font-size: 40px;
+  margin: 0 20px 0 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.content p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  color: var(--bluegrey);
+  text-align: center;
+  width: 75%;
+  margin-bottom: 58px;
+}
+
+.content img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
 }
